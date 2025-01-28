@@ -34,3 +34,25 @@ pour une vrai vérification il faut la cli > npm run ts
 
 mais si on veut après compilation dans un repertoire dist à la racine.
 
+----------------------------------------------------------------------------------------------------------------
+2 partie webpack pour tout regrouper il faut faire des bundle
+>npm install webpack
+>npm install webpack-cli
+>npm install ts-loader    //charger le typescript depuis webpack
+>npm install html-webpack-plugin    //prendre le html est de le générer automatiquement comme angular
+ce qui va écrire automatiquement  donc supprimer
+<script src="../main.js"></script>
+    <script>
+        const pers = new personne();
+        pers.manger();
+    </script>
+
+créer un fichier webpack.config.js
+   avec ls directives de webpack
+et dans la package.json le build en dessous de init
+     "init": "tsc --init",
+    "build": "webpack --mode development", plutôt ça: "build": "webpack --config=webpack.config.js",
+    
+
+
+
