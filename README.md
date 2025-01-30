@@ -134,9 +134,16 @@ on peut aussi faire avec export default person donc pas besoin d'accolade c'est 
 résultat je mange.
 ------------------------------------------------------------------
 3partie typescript
-le any est banni et on voit les class et type avec une certaine structure
+le any est banni et on voit les class (sert just constructor et mutateurs) et type avec une certaine structure
 -------------------------------------------------------------------
 4partie 
+dto data transformers objet 
+beacoup de dto qui viennent de notre api (objet json qui va falloir travailler et il est d'une certaine structure (property))
+et on doit les controler avant l'exécution.
+pas de any mais unknown
+avec player.ts enemy et charactere
+
+voici un petit début de typescript comment il faut s'organiser
 
 
 

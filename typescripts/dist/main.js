@@ -16,7 +16,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst person_1 = __webpack_require__(/*! ./person */ \"./src/person.ts\");\nconst nourriture_1 = __webpack_require__(/*! ./template/nourriture */ \"./src/template/nourriture.ts\");\nlet frodon = new person_1.person();\nfrodon.manger(new nourriture_1.Nourriture(10));\n// Output: Je mange\n\n\n//# sourceURL=webpack://typescript/./src/main.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst person_1 = __webpack_require__(/*! ./person */ \"./src/person.ts\");\nconst nourriture_1 = __webpack_require__(/*! ./template/nourriture */ \"./src/template/nourriture.ts\");\nconst arme_1 = __webpack_require__(/*! ./template/arme */ \"./src/template/arme.ts\");\nlet frodon = new person_1.person();\nfrodon.manger(new nourriture_1.Nourriture(10));\n// Output: Je mange\nconst arme = new arme_1.Arme();\n//ici ça comppile car in vérifie que la structure sui m'interesse est respectée\n//cela s'appelle des fonctions polymorphiques\nconst arc = {\n    puissance: 20\n};\n//utilisation\n(0, arme_1.afficherPuissance)(new arme_1.Arme());\n(0, arme_1.afficherPuissance)({ puissance: 20 });\n\n\n//# sourceURL=webpack://typescript/./src/main.ts?");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\ncons
 /***/ ((__unused_webpack_module, exports) => {
 
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.person = void 0;\nclass person {\n    manger(nourriture) {\n        console.info(\"Je mange\" + nourriture.pointsDeVie + 'points de vie!');\n    }\n}\nexports.person = person;\n\n\n//# sourceURL=webpack://typescript/./src/person.ts?");
+
+/***/ }),
+
+/***/ "./src/template/arme.ts":
+/*!******************************!*\
+  !*** ./src/template/arme.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.Arme = void 0;\nexports.afficherPuissance = afficherPuissance;\nclass Arme {\n    constructor() {\n        this.puissance = 10;\n        this.bouclier = 0;\n    }\n}\nexports.Arme = Arme;\n//le type n'existe pas avec le js car il est que pour tsle controle de type\n/**\n * Affiche la puissance de l'arme\n * @param arme\n */\n//ici c'est un prototypage mais pas une instance de la classe\n//export function afficherPuissance(arme: {puissance: number}){\nfunction afficherPuissance(arme) {\n    console.info(\"La puissance de l'arme est de \" + arme.puissance);\n}\n\n\n//# sourceURL=webpack://typescript/./src/template/arme.ts?");
 
 /***/ }),
 
