@@ -132,6 +132,11 @@ comme nous avons le watch dans webpack le terminal nous pouvons voir que la comp
 onpeut isoler un fichier class c'est une isolation en namespace (package)
 on peut aussi faire avec export default person donc pas besoin d'accolade c'est plutôt l'entité qui représente ce fichier.
 résultat je mange.
+------------------------------------------------------------------
+3partie typescript
+le any est banni et on voit les class et type avec une certaine structure
+-------------------------------------------------------------------
+4partie 
 
 
 
